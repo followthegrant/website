@@ -21,7 +21,7 @@ export class AppComponent {
   and = 'and';
   name_simon = 'Simon Wörpel';
   link_simon = 'https://medienrevolte.de/';
-  profession_simon_elena = 'are data journalists responsible mainly for data gathering and analysis.'
+  profession_simon_elena = 'are data journalists responsible mainly for data gathering and analysis.';
   name_karl = 'Karl Scholze';
   link_karl = 'https://twitter.com/K4rls0n';
   profession_karl = 'is an entrepreneur and software engineer in charge of the website.';
