@@ -1,20 +1,44 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <h2>
+    {{ subtitle }}
+  </h2>
+  <br/>
+  <br/>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h4 class="col-sm-6 offset-3">
+  {{ about }}
+</h4>
+<p class="col-sm-6 offset-3">
+  {{ about_text_1 }}
+  <a href="{{ link_medienrevolte }}">idea in action</a>
+  {{ about_text_2 }}
+</p>
+<h5 class="col-sm-6 offset-3">
+  {{ who }}
+</h5>
+<p class="col-sm-6 offset-3">
+  <a href="{{ link_hristio }}">{{ name_hristio }}</a>
+  {{ profession_hristio }}
+  <br/>
+  <a href="{{ link_elena }}">{{ name_elena }}</a>
+  {{ and }} <a href="{{ link_simon }}">{{ name_simon }}</a>
+  {{ profession_simon_elena }}
+  <br/>
+  <a href="{{ link_karl }}">{{ name_karl }}</a>
+  {{ profession_karl }}
+</p>
+<h5 class="col-sm-6 offset-3">
+  {{ get_in_touch }}
+</h5>
+<p class="col-sm-6 offset-3">
+  {{ get_in_touch_text }}
+  <a href="{{ twitter_link }}">@followthegrant</a>
+</p>
+<h5 class="col-sm-6 offset-3">
+  {{ funded_by }}
+</h5>
+<img class="col-sm-6 offset-3" width="100%" alt="Angular Logo" src="/assets/funders.svg"/>
 
