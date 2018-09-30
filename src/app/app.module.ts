@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from "@angular/http";
 
 import { RouterModule} from "@angular/router";
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { ResultComponent } from './result/result.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import {SearchService} from "./services/search.service";
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: 'home',
@@ -39,10 +42,12 @@ import { HomeComponent } from './home/home.component';
       },
       {
         path: '**',
-        component: NotFoundComponent
+        component: HomeComponent
       }])
   ],
-  providers: [],
+  providers: [
+    SearchService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
