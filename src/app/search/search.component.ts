@@ -16,27 +16,26 @@ export class SearchComponent implements OnInit {
   disclosuresRaw: any[] = [];
   disclosures: Disclosure[] = new Array<Disclosure>();
 
-  constructor(private service: SearchService) {
-
-  }
+  constructor(private service: SearchService) { }
 
   getResults(input : HTMLInputElement) {
+    this.disclosures = new Array<Disclosure>();
     this.service.getResults(input)
       .subscribe(
         response => {
           this.fullResult = response.json();
 
-          this.facets.push(response.json().facets);
+          //this.facets.push(response.json().facets);
           this.disclosuresRaw = response.json().disclosures;
 
           console.log(response.json());
 
-          //TODO create all disclosure objects
+          //create all disclosure objects
           for (let disc of this.disclosuresRaw) {
             let Disc : Disclosure = new Disclosure(
               disc.author.name,
               disc.author.institutions,
-              disc.author.disclosure,
+              disc.disclosure,
               disc.type,
               disc.paper.abstract,
               disc.paper.date,

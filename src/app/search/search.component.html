@@ -18,7 +18,51 @@
     <li
       *ngFor="let disc of this.disclosures"
       class="list-group-item">
-      {{ 'Author: ' + disc.authorName }}
+      <div class="row">
+        <div class="col-12 font-weight-bold lead">
+          {{ disc.disclosurex }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <small>
+            <a>
+              {{ disc.title }}
+            </a>
+          </small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-auto">
+          <small class="font-italic">
+            Author:
+          </small>
+          <small>
+            {{ disc.authorName }}
+          </small>
+        </div>
+        <div class="col-sm-8">
+          <small class="font-italic">
+            Institutions:
+          </small>
+          <small>
+            {{ disc.institutions }}
+          </small>
+        </div>
+        <div class="col-sm-auto">
+          <small class="font-italic">
+            Publisher:
+          </small>
+          <small>
+            {{ disc.publisher }}
+          </small>
+        </div>
+        <div class="col">
+          <small>
+            {{ disc.date }}
+          </small>
+        </div>
+      </div>
     </li>
   </ul>
 </div>

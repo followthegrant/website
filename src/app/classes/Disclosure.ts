@@ -63,6 +63,14 @@ export class Disclosure {
     return this._publisher;
   }
 
+  get title () {
+    return this._title;
+  }
+
+  get tags () {
+    return this._tags;
+  }
+
   get paperType () {
     return this._paperType;
   }
