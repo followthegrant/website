@@ -1,8 +1,5 @@
-import {Http, RequestOptions} from '@angular/http';
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { SearchService } from '../services/search.service';
-import {Url} from "url";
-import {forEach} from "@angular/router/src/utils/collection";
 import {Disclosure} from "../classes/Disclosure";
 
 @Component({
@@ -11,6 +8,7 @@ import {Disclosure} from "../classes/Disclosure";
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
   fullResult: any[] = [];
   facets: any[] = [];
   disclosuresRaw: any[] = [];
@@ -58,7 +56,15 @@ export class SearchComponent implements OnInit {
         })
   }
 
+  onNavigate(url: string){
+    window.open(url, "_blank");
+  }
+
   ngOnInit() {
 
   }
+}
+
+export interface DisclosureEventArgs {
+  disc :Disclosure;
 }
